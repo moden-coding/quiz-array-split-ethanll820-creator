@@ -52,7 +52,7 @@ public static int[] copyFrontAndBack(int[] nums){
     int[] nums2 = new int[2];
         if(nums.length >= 2){
             int first = nums[0];
-            int last = nums.length;
+            int last = nums[nums.length-1];
             nums2[0] = first;
             nums2[1] = last;
 
