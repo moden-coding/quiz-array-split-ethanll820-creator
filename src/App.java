@@ -48,16 +48,38 @@ public class App {
         System.out.println("With input \"I can do this\" you should return 4. You got: " + maxWordLength("I can do this"));
     }
 
-    public static int[] copyFrontAndBack(int[] nums){
+public static int[] copyFrontAndBack(int[] nums){
+    int[] nums2 = new int[2];
+        if(nums.length >= 2){
+            int first = nums[0];
+            int last = nums.length;
+            nums2[0] = first;
+            nums2[1] = last;
 
-        return null; //this is a placeholder
+        }else if(nums.length == 1){
+            int all = nums[0];
+            nums2[0] = all;
+            nums2[1] = all;
+        }
+        return nums2;
+
+         //this is a placeholder
 
     }
 
     public static int maxWordLength(String sentence){
+        int maxlettercount = 0;
+        String[] splitspaces = sentence.split(" ");
+        for(int i = 0; i < splitspaces.length; i++){
+           int lettercount =splitspaces[i].length();
+           if(lettercount > maxlettercount){
+            maxlettercount = lettercount;
+           }
+
+        }
 
 
-        return -1; //this is a placeholder
+        return maxlettercount; //this is a placeholder
     }
 
 
